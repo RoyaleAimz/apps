@@ -3,69 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanta Lite - VantaScripts</title>
+  <title>Vanta Lite | VantaScripts</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
-    <div class="logo" onclick="window.location.href='index.html'">VantaScripts</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="scripts.html" class="active">Scripts</a>
-      <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
-    </nav>
-    <div class="search-container">
-      <input type="text" placeholder="Search..." class="search-bar" />
+    <div class="nav-center">
+      <h1><a href="index.html" class="logo">VantaScripts</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scripts.html">Scripts</a></li>
+          <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
     </div>
   </header>
 
-  <main class="content script-detail">
-    <button class="back-button" onclick="window.location.href='scripts.html'">← Back to Scripts</button>
-    <div class="script-info">
-      <img src="icons/lite-icon.png" alt="Vanta Lite Icon" class="script-detail-icon"/>
-      <h1>Vanta Lite</h1>
-      <div class="badges">
-        <span class="badge green">🟢 Undetected — Safe & Secure</span>
-        <span class="badge gold">💸 Affordable & Reliable</span>
-      </div>
-      <p class="description">
-        Vanta Lite is your entry-level script built for simplicity and performance. 
-        Ideal for new users who want clean features without complexity.
-      </p>
-      <div class="price">Only $4.99</div>
-      <button class="buy-button">Buy Now</button>
-    </div>
+  <main class="main-section">
+    <a href="scripts.html" class="back-button">← Back to Scripts</a>
+
+    <section class="script-detail">
+      <h2>Vanta Lite</h2>
+      <p class="price-tag">$4.99</p>
+      <div class="badge badge-green">🟢 Undetected - Safe & Secure</div>
+      <div class="badge badge-blue">⚙️ Lightweight Performance</div>
+      <p>Our Lite version gives you a safe, streamlined experience with all the core features needed for an edge in Rust.</p>
+
+      <ul class="features-list">
+        <li>✔️ Low CPU usage</li>
+        <li>✔️ Auto recoil for key weapons</li>
+        <li>✔️ Secure injection system</li>
+        <li>✔️ Frequent undetected updates</li>
+      </ul>
+
+      <button class="buy-now-button" onclick="openPaymentModal()">Buy Now</button>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-left">
-      <img src="icons/logo.png" alt="Vanta Logo" class="footer-logo" />
-      <p>VantaScripts provides secure and advanced scripts for Rust.</p>
-    </div>
-    <div class="footer-links">
-      <div>
-        <h4>Navigate</h4>
-        <a href="scripts.html">Catalog</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQ</a>
-        <a href="https://discord.gg/J6dhVNj2">Support</a>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
+        <p>Premium Rust scripts designed for safety, reliability, and power.</p>
       </div>
-      <div>
-        <h4>Information</h4>
-        <a href="user-agreement.html">User Agreement</a>
-        <a href="offer-agreement.html">Offer Agreement</a>
+      <div class="footer-sections">
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="user-agreement.html">User Agreement</a></li>
+            <li><a href="offer-agreement.html">Offer Agreement</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a></li>
+            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="footer-section payment-section">
+          <h4>Payments</h4>
+          <div class="payment-icons">
+            <img src="images/paypal.png" alt="PayPal" />
+            <img src="images/visa.png" alt="Visa" />
+            <img src="images/mastercard.png" alt="Mastercard" />
+            <img src="images/crypto.png" alt="Crypto" />
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Follow Us</h4>
-        <a href="https://discord.gg/J6dhVNj2">Discord</a>
-        <a href="#">YouTube</a>
-      </div>
-    </div>
-    <div class="footer-payments">
-      <img src="icons/visa.png" alt="Visa" />
-      <img src="icons/paypal.png" alt="PayPal" />
-      <img src="icons/crypto.png" alt="Crypto" />
     </div>
   </footer>
+
+  <!-- Payment Modal (if needed) -->
+  <div id="payment-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" onclick="closePaymentModal()">×</span>
+      <h3>Select a Payment Method</h3>
+      <ul>
+        <li><button>PayPal</button></li>
+        <li><button>Crypto</button></li>
+        <li><button>Visa / Mastercard</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function openPaymentModal() {
+      document.getElementById('payment-modal').classList.remove('hidden');
+    }
+    function closePaymentModal() {
+      document.getElementById('payment-modal').classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
