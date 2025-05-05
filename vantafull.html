@@ -3,82 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanta Full - VantaScripts</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Vanta Full – VantaScripts</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="brand">VantaScripts</a>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="scripts.html">Scripts</a>
-      <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
-    </nav>
-    <div class="nav-search">
-      <input type="text" placeholder="Search..." />
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">VantaScripts</a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="scripts.html">Scripts</a>
+        <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
     </div>
   </header>
 
-  <!-- Back Button -->
-  <div class="back-btn-container">
-    <a href="scripts.html" class="back-btn">← Back</a>
-  </div>
-
-  <!-- Script Details -->
-  <section class="script-detail">
-    <div class="script-card large">
-      <div class="badges">
-        <span class="badge green">🟢 Undetected</span>
-        <span class="badge gold">The Safest</span>
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <button onclick="history.back()" class="back-button">← Back</button>
+    <div class="script-detail">
+      <img src="images/full-icon.png" alt="Vanta Full Icon" class="script-image">
+      <div class="script-info">
+        <h1>Vanta Full</h1>
+        <span class="badge undetected">🛡️ Undetected — Maximum protection with advanced stealth</span>
+        <span class="badge best-sale">⭐ Premium Package — Full feature access</span>
+        <p class="price">$12.99</p>
+        <p class="description">
+          Vanta Full is the ultimate Rust script solution. It includes every premium feature available with high configurability, a custom UI, and unmatched safety against detection. Perfect for serious players.
+        </p>
+        <h3>Features:</h3>
+        <ul>
+          <li>All features from Vanta Lite</li>
+          <li>Customizable UI overlay</li>
+          <li>Advanced recoil/trigger system</li>
+          <li>Hotkey toggles</li>
+          <li>Monthly Access – $46.99</li>
+          <li>Lifetime Access – $79.99</li>
+        </ul>
       </div>
-      <h2>Vanta Full</h2>
-      <p>Includes full features for advanced users. Enhanced control, security, and flexibility for serious gameplay.</p>
-      <ul>
-        <li>Advanced No Recoil</li>
-        <li>Auto-Script Switching</li>
-        <li>Manual Configuration</li>
-        <li>Undetected Technology</li>
-      </ul>
-      <p class="price">$12.99</p>
-      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-left">
-      <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
-      <p>VantaScripts offers premium Rust scripts designed for safety and performance.</p>
-    </div>
-    <div class="footer-right">
-      <div class="footer-column">
-        <h4>Navigate</h4>
-        <a href="scripts.html">Catalog</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQ</a>
-        <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Vanta Logo">
+        <p>VantaScripts provides powerful, undetected Rust scripts designed for safety and performance.</p>
       </div>
-      <div class="footer-column">
-        <h4>Info</h4>
-        <a href="user-agreement.html">User Agreement</a>
-        <a href="offer-agreement.html">Offer Agreement</a>
-      </div>
-      <div class="footer-column">
-        <h4>Follow Us</h4>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-        <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
-      </div>
-      <div class="footer-column">
-        <h4>Payments</h4>
-        <div class="payment-icons">
-          <img src="images/visa.png" alt="Visa"/>
-          <img src="images/paypal.png" alt="PayPal"/>
-          <img src="images/mastercard.png" alt="Mastercard"/>
+      <div class="footer-links">
+        <div>
+          <h4>Navigate</h4>
+          <a href="scripts.html">Catalog</a>
+          <a href="#">Blog</a>
+          <a href="#">FAQ</a>
+          <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="user-agreement.html">User Agreement</a>
+          <a href="offer-agreement.html">Offer Agreement</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="https://youtube.com" target="_blank">YouTube</a>
+          <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
         </div>
       </div>
+      <div class="footer-payments">
+        <img src="images/payments/visa.png" alt="Visa">
+        <img src="images/payments/mastercard.png" alt="MasterCard">
+        <img src="images/payments/paypal.png" alt="PayPal">
+        <img src="images/payments/crypto.png" alt="Crypto">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VantaScripts. All rights reserved.</p>
     </div>
   </footer>
 </body>
