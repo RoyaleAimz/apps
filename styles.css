@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #f5f5f5;
+}
+
+.header {
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo a {
+  color: #5effc3;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+.main-content {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.script-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.script-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.script-card:hover {
+  box-shadow: 0 0 15px #5effc3;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0.5rem 0.25rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.undetected {
+  background-color: #007f3e;
+  color: #aaffd2;
+}
+
+.badge.best-sale {
+  background-color: #7f1d1d;
+  color: #ffd9d9;
+}
+
+.footer {
+  background: #0a0a0a;
+  padding: 2rem;
+  color: #ccc;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links div {
+  margin-right: 2rem;
+}
+
+.footer-links h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+
+.footer-payments img {
+  width: 40px;
+  margin: 0.25rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
