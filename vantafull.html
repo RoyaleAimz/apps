@@ -3,267 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VantaFull - VantaScripts</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #0f0f0f, #1c1c1c);
-      color: white;
-    }
-
-    header {
-      background-color: #111;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #00bcd4;
-      cursor: pointer;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #00bcd4;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 60px auto 100px;
-      padding: 0 20px;
-    }
-
-    .back-button {
-      display: inline-block;
-      margin-bottom: 30px;
-      padding: 10px 20px;
-      background-color: #00bcd4;
-      color: black;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      position: absolute;
-      top: 90px;
-      left: 30px;
-    }
-
-    .script-box {
-      background: #1e1e1e;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 20px #00bcd4;
-      position: relative;
-    }
-
-    .script-box h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    .badges {
-      margin: 15px 0;
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: #00bcd4;
-      color: black;
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin-right: 10px;
-      font-weight: bold;
-    }
-
-    .price {
-      font-size: 22px;
-      margin: 20px 0;
-    }
-
-    .buy-button {
-      background-color: #00bcd4;
-      color: black;
-      border: none;
-      padding: 10px 25px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .buy-button:hover {
-      background-color: #00acc1;
-    }
-
-    .status-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-weight: bold;
-      background: #2ecc71;
-      padding: 5px 10px;
-      border-radius: 10px;
-      font-size: 14px;
-    }
-
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 40px 30px;
-      margin-top: 80px;
-    }
-
-    footer .footer-section {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .footer-section div {
-      margin: 15px;
-    }
-
-    .footer-logo {
-      font-size: 24px;
-      color: #00bcd4;
-      font-weight: bold;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      margin: 6px 0;
-    }
-
-    .footer-links a:hover {
-      color: #00bcd4;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      padding-top: 120px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.9);
-    }
-
-    .modal-content {
-      background-color: #1c1c1c;
-      margin: auto;
-      padding: 20px;
-      border-radius: 15px;
-      width: 300px;
-      text-align: center;
-    }
-
-    .close {
-      color: white;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .modal-button {
-      background-color: #00bcd4;
-      color: black;
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .modal-button:hover {
-      background-color: #00acc1;
-    }
-  </style>
+  <title>Vanta Full - VantaScripts</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <h1 onclick="location.href='index.html'">VantaScripts</h1>
-    <nav>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand">VantaScripts</a>
+    </div>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="scripts.html">Scripts</a>
       <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
     </nav>
+    <div class="nav-search">
+      <input type="text" placeholder="Search..." />
+    </div>
   </header>
 
-  <div class="container">
-    <a href="scripts.html" class="back-button">← Back</a>
+  <!-- Back Button -->
+  <div class="back-btn-container">
+    <a href="scripts.html" class="back-btn">← Back</a>
+  </div>
 
-    <div class="script-box">
-      <div class="status-badge">🟢 Undetected</div>
-      <h2>VantaFull</h2>
+  <!-- Script Details -->
+  <section class="script-detail">
+    <div class="script-card large">
       <div class="badges">
-        <span class="badge">Undetected</span>
-        <span class="badge">Top Tier</span>
-        <span class="badge">Advanced</span>
+        <span class="badge green">🟢 Undetected</span>
+        <span class="badge gold">The Safest</span>
       </div>
-      <p>Full version of our Rust script with all features, including advanced automation and customization.</p>
+      <h2>Vanta Full</h2>
+      <p>Includes full features for advanced users. Enhanced control, security, and flexibility for serious gameplay.</p>
+      <ul>
+        <li>Advanced No Recoil</li>
+        <li>Auto-Script Switching</li>
+        <li>Manual Configuration</li>
+        <li>Undetected Technology</li>
+      </ul>
       <p class="price">$12.99</p>
-      <button class="buy-button" onclick="openModal()">Buy Now</button>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Modal -->
-  <div id="buyModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3>Select Payment</h3>
-      <button class="modal-button">PayPal</button>
-      <button class="modal-button">Crypto</button>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
+      <p>VantaScripts offers premium Rust scripts designed for safety and performance.</p>
     </div>
-  </div>
-
-  <footer>
-    <div class="footer-section">
-      <div>
-        <div class="footer-logo">Vanta</div>
-        <p>The most trusted Rust script provider.</p>
-      </div>
-      <div class="footer-links">
+    <div class="footer-right">
+      <div class="footer-column">
         <h4>Navigate</h4>
         <a href="scripts.html">Catalog</a>
         <a href="#">Blog</a>
         <a href="#">FAQ</a>
         <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
       </div>
-      <div class="footer-links">
-        <h4>Legal</h4>
-        <a href="useragreement.html">User Agreement</a>
-        <a href="offeragreement.html">Offer Agreement</a>
+      <div class="footer-column">
+        <h4>Info</h4>
+        <a href="user-agreement.html">User Agreement</a>
+        <a href="offer-agreement.html">Offer Agreement</a>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
+      </div>
+      <div class="footer-column">
+        <h4>Payments</h4>
+        <div class="payment-icons">
+          <img src="images/visa.png" alt="Visa"/>
+          <img src="images/paypal.png" alt="PayPal"/>
+          <img src="images/mastercard.png" alt="Mastercard"/>
+        </div>
       </div>
     </div>
   </footer>
-
-  <script>
-    function openModal() {
-      document.getElementById('buyModal').style.display = 'block';
-    }
-
-    function closeModal() {
-      document.getElementById('buyModal').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
 
