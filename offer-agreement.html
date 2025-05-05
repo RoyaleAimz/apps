@@ -4,164 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Offer Agreement - VantaScripts</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d url('your-background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    header {
-      background-color: rgba(20, 20, 20, 0.9);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header a:hover {
-      color: #00ffaa;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #00ffaa;
-      text-decoration: none;
-    }
-    main {
-      padding: 80px 5% 100px 5%;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 8px;
-      margin: 40px auto;
-      max-width: 1000px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #00ffaa;
-      margin-top: 30px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 40px 5%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    footer div {
-      flex: 1 1 200px;
-    }
-    .footer-logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #00ffaa;
-    }
-    .social-icons img, .payment-icons img {
-      width: 30px;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
-    .nav-links a {
-      display: block;
-      color: white;
-      margin: 4px 0;
-      text-decoration: none;
-    }
-    .nav-links a:hover {
-      color: #00ffaa;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
-<header>
-  <a class="logo" href="index.html">VantaScripts</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="scripts.html">Scripts</a>
-    <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
-  </nav>
-</header>
-
-<main>
-  <h1>Offer Agreement</h1>
-
-  <p>This Offer Agreement outlines the terms and conditions between you (“User”) and VantaScripts regarding your purchase and use of our Rust scripting products.</p>
-
-  <h2>1. Nature of Offer</h2>
-  <p>All offers are considered digital licenses and not physical goods. Once access is granted, refunds are not applicable unless otherwise agreed in writing.</p>
-
-  <h2>2. Licensing Terms</h2>
-  <ul>
-    <li>Licenses are provided per individual and are non-transferable.</li>
-    <li>Lifetime licenses are bound to one system ID. Misuse results in revocation.</li>
-    <li>Monthly licenses must be renewed to retain access.</li>
-  </ul>
-
-  <h2>3. Payment Terms</h2>
-  <p>Accepted payment methods include PayPal, cryptocurrencies, and select cards. Chargebacks will result in an immediate ban from all VantaScripts services.</p>
-
-  <h2>4. Delivery</h2>
-  <p>Once payment is verified, access will be provided within a reasonable timeframe, typically within 24 hours. If delays occur, you may contact support via our Discord.</p>
-
-  <h2>5. No Warranty</h2>
-  <p>All products are provided “as is”. VantaScripts does not guarantee specific outcomes such as immunity to bans, game compatibility, or specific performance.</p>
-
-  <h2>6. Termination</h2>
-  <p>We reserve the right to terminate access at any time for breaches of this agreement or abuse of our services.</p>
-
-  <h2>7. Agreement Updates</h2>
-  <p>This offer agreement is subject to change without notice. Continued use of our services implies acceptance of any revisions.</p>
-</main>
-
-<footer>
-  <div>
-    <div class="footer-logo">VantaScripts</div>
-    <p>Premium Rust scripts designed for safety, power, and performance.</p>
-  </div>
-
-  <div class="nav-links">
-    <strong>Navigation</strong>
-    <a href="scripts.html">Catalog</a>
-    <a href="#">Blog</a>
-    <a href="#">FAQ</a>
-    <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
-  </div>
-
-  <div class="nav-links">
-    <strong>Information</strong>
-    <a href="useragreement.html">User Agreement</a>
-    <a href="offeragreement.html">Offer Agreement</a>
-  </div>
-
-  <div>
-    <strong>Follow Us</strong><br />
-    <div class="social-icons">
-      <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-      <a href="https://discord.gg/J6dhVNj2"><img src="discord-icon.png" alt="Discord"></a>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand">VantaScripts</a>
     </div>
-
-    <strong>We Accept</strong><br />
-    <div class="payment-icons">
-      <img src="visa.png" alt="Visa" />
-      <img src="paypal.png" alt="PayPal" />
-      <img src="bitcoin.png" alt="Crypto" />
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="scripts.html">Scripts</a>
+      <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+    </nav>
+    <div class="nav-search">
+      <input type="text" placeholder="Search..." />
     </div>
-  </div>
-</footer>
+  </header>
 
+  <!-- Agreement Content -->
+  <section class="agreement-section">
+    <h1>Offer Agreement</h1>
+    <p>By purchasing or receiving any script or license from VantaScripts, you agree to the following terms:</p>
+    <ul>
+      <li>All products are sold “as-is” with no guarantee of fitness for a particular purpose.</li>
+      <li>Once a product is delivered or a license is activated, refunds are not permitted.</li>
+      <li>We reserve the right to terminate access without notice if our terms are violated (e.g. sharing your license).</li>
+      <li>All offers are final. Misuse of our products will lead to revocation of access.</li>
+      <li>Support and product delivery are provided only through official VantaScripts channels.</li>
+    </ul>
+    <p>Offers are valid only through VantaScripts. Reselling or redistributing scripts is prohibited.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
+      <p>VantaScripts offers premium Rust scripts designed for safety and performance.</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-column">
+        <h4>Navigate</h4>
+        <a href="scripts.html">Catalog</a>
+        <a href="#">Blog</a>
+        <a href="#">FAQ</a>
+        <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+      </div>
+      <div class="footer-column">
+        <h4>Info</h4>
+        <a href="user-agreement.html">User Agreement</a>
+        <a href="offer-agreement.html">Offer Agreement</a>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
+      </div>
+      <div class="footer-column">
+        <h4>Payments</h4>
+        <div class="payment-icons">
+          <img src="images/visa.png" alt="Visa"/>
+          <img src="images/paypal.png" alt="PayPal"/>
+          <img src="images/mastercard.png" alt="Mastercard"/>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
