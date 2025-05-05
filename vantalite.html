@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanta Lite - VantaScripts</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Vanta Lite | VantaScripts</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-background">
 
   <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">VantaScripts</a>
+  <header class="main-header">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">VantaScripts</a>
     </div>
-    <nav class="nav">
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="scripts.html">Scripts</a>
       <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
@@ -23,53 +23,93 @@
     </div>
   </header>
 
-  <!-- Script Detail Section -->
-  <main class="script-detail">
-    <button class="back-button" onclick="history.back()">← Back</button>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="scripts.html">← Back</a>
+  </div>
 
+  <!-- Script Details -->
+  <section class="script-detail">
     <div class="script-detail-card">
       <h1>Vanta Lite</h1>
+      <p class="script-description">A powerful yet lightweight script for Rust. Perfect for users who want core features at an affordable price.</p>
+      
       <div class="badges">
         <span class="badge green">🟢 Undetected</span>
         <span class="badge blue">Best Seller</span>
         <span class="badge purple">Safe & Secure</span>
       </div>
-      <p class="price">$4.99</p>
-      <p class="description">
-        Vanta Lite offers powerful features at a budget-friendly price.
-        Perfect for users who want safe, undetected Rust automation with essential functions.
-      </p>
-      <button class="buy-button">Buy Now</button>
+
+      <div class="script-price">$4.99</div>
+
+      <button class="buy-button" onclick="openBuyModal()">Buy Now</button>
     </div>
-  </main>
+  </section>
+
+  <!-- Buy Modal (hidden until clicked) -->
+  <div id="buyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBuyModal()">&times;</span>
+      <h2>Select Payment Method</h2>
+      <ul class="payment-options">
+        <li><button>PayPal</button></li>
+        <li><button>Crypto</button></li>
+        <li><button>Card</button></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Navigate</h3>
-        <a href="scripts.html">Catalog</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQ</a>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="images/vanta-logo.png" alt="Vanta Logo" class="footer-logo" />
+        <p>The most trusted Rust script provider. Undetected, safe, and affordable.</p>
       </div>
-      <div class="footer-section">
-        <h3>Legal</h3>
-        <a href="user-agreement.html">User Agreement</a>
-        <a href="offer-agreement.html">Offer Agreement</a>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="scripts.html">Catalog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="user-agreement.html">User Agreement</a></li>
+            <li><a href="offer-agreement.html">Offer Agreement</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li><a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a></li>
+            <li><a href="#"><img src="images/discord-icon.png" alt="Discord" /></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-        <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
-      </div>
-      <div class="footer-payments">
-        <img src="icons/visa.png" alt="Visa" />
-        <img src="icons/paypal.png" alt="PayPal" />
-        <img src="icons/mastercard.png" alt="Mastercard" />
-        <img src="icons/crypto.png" alt="Crypto" />
+
+      <div class="payment-icons">
+        <img src="images/visa.png" alt="Visa" />
+        <img src="images/mastercard.png" alt="MasterCard" />
+        <img src="images/paypal.png" alt="PayPal" />
+        <img src="images/bitcoin.png" alt="Bitcoin" />
       </div>
     </div>
   </footer>
 
+  <script>
+    function openBuyModal() {
+      document.getElementById("buyModal").style.display = "block";
+    }
+    function closeBuyModal() {
+      document.getElementById("buyModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
+
