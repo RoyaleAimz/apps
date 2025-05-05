@@ -2,171 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VantaScripts - Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offer Agreement - VantaScripts</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0d0d url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
     header {
+      background-color: rgba(20, 20, 20, 0.9);
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(20, 20, 20, 0.95);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
-    .brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #6ae3ff;
-      text-decoration: none;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #fff;
-    }
-    .search-bar input {
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
-      border: none;
-    }
-    .hero {
-      padding: 5rem 2rem 2rem;
-      text-align: center;
-    }
-    .scripts-section {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem 2rem 6rem;
-    }
-    .script-card {
-      background: #1c1c1c;
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .script-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-    }
-    .badge {
-      background: #2ecc71;
+    header a {
       color: white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      font-size: 0.75rem;
-      display: inline-block;
-      margin-bottom: 0.5rem;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header a:hover {
+      color: #00ffaa;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffaa;
+      text-decoration: none;
+    }
+    main {
+      padding: 80px 5% 100px 5%;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #00ffaa;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.6;
     }
     footer {
-      background: #111;
+      background-color: #111;
       color: white;
-      padding: 3rem 2rem;
+      padding: 40px 5%;
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
     }
-    footer .logo-desc {
-      max-width: 300px;
+    footer div {
+      flex: 1 1 200px;
     }
-    footer .footer-links,
-    footer .footer-social,
-    footer .footer-payment {
-      margin-top: 1rem;
+    .footer-logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00ffaa;
     }
-    .footer-links a,
-    .footer-social a {
-      color: #fff;
+    .social-icons img, .payment-icons img {
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .nav-links a {
       display: block;
+      color: white;
+      margin: 4px 0;
       text-decoration: none;
-      margin-bottom: 0.5rem;
     }
-    .footer-payment img {
-      height: 30px;
-      margin-right: 0.5rem;
+    .nav-links a:hover {
+      color: #00ffaa;
     }
   </style>
-  <script>
-    function performSearch() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      if (query.includes("lite")) window.location.href = "VantaLite.html";
-      else if (query.includes("full")) window.location.href = "VantaFull.html";
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <a href="index.html" class="brand">VantaScripts</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="scripts.html">Scripts</a>
-      <a href="https://discord.gg/J6dhVNj2">Support</a>
-    </nav>
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search scripts..." onkeydown="if(event.key==='Enter') performSearch()" />
-    </div>
-  </header>
 
-  <div class="hero">
-    <h1>Welcome to VantaScripts</h1>
-    <p>Top-tier Rust scripts — safe, optimized, and undetected.</p>
+<header>
+  <a class="logo" href="index.html">VantaScripts</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="scripts.html">Scripts</a>
+    <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Offer Agreement</h1>
+
+  <p>This Offer Agreement outlines the terms and conditions between you (“User”) and VantaScripts regarding your purchase and use of our Rust scripting products.</p>
+
+  <h2>1. Nature of Offer</h2>
+  <p>All offers are considered digital licenses and not physical goods. Once access is granted, refunds are not applicable unless otherwise agreed in writing.</p>
+
+  <h2>2. Licensing Terms</h2>
+  <ul>
+    <li>Licenses are provided per individual and are non-transferable.</li>
+    <li>Lifetime licenses are bound to one system ID. Misuse results in revocation.</li>
+    <li>Monthly licenses must be renewed to retain access.</li>
+  </ul>
+
+  <h2>3. Payment Terms</h2>
+  <p>Accepted payment methods include PayPal, cryptocurrencies, and select cards. Chargebacks will result in an immediate ban from all VantaScripts services.</p>
+
+  <h2>4. Delivery</h2>
+  <p>Once payment is verified, access will be provided within a reasonable timeframe, typically within 24 hours. If delays occur, you may contact support via our Discord.</p>
+
+  <h2>5. No Warranty</h2>
+  <p>All products are provided “as is”. VantaScripts does not guarantee specific outcomes such as immunity to bans, game compatibility, or specific performance.</p>
+
+  <h2>6. Termination</h2>
+  <p>We reserve the right to terminate access at any time for breaches of this agreement or abuse of our services.</p>
+
+  <h2>7. Agreement Updates</h2>
+  <p>This offer agreement is subject to change without notice. Continued use of our services implies acceptance of any revisions.</p>
+</main>
+
+<footer>
+  <div>
+    <div class="footer-logo">VantaScripts</div>
+    <p>Premium Rust scripts designed for safety, power, and performance.</p>
   </div>
 
-  <div class="scripts-section">
-    <div class="script-card">
-      <span class="badge">🟢 Undetected</span>
-      <h2>Vanta Lite</h2>
-      <p>Lightweight and powerful script — $4.99</p>
-      <a href="VantaLite.html" style="color: #6ae3ff">View Details</a>
-    </div>
-    <div class="script-card">
-      <span class="badge">🟢 Undetected</span>
-      <h2>Vanta Full</h2>
-      <p>Full-featured premium script — $12.99</p>
-      <a href="VantaFull.html" style="color: #6ae3ff">View Details</a>
-    </div>
+  <div class="nav-links">
+    <strong>Navigation</strong>
+    <a href="scripts.html">Catalog</a>
+    <a href="#">Blog</a>
+    <a href="#">FAQ</a>
+    <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
   </div>
 
-  <footer>
-    <div class="logo-desc">
-      <h3 style="color: #6ae3ff;">VantaScripts</h3>
-      <p>Enhance your Rust gameplay with elite-level scripts, consistently maintained and undetected.</p>
+  <div class="nav-links">
+    <strong>Information</strong>
+    <a href="useragreement.html">User Agreement</a>
+    <a href="offeragreement.html">Offer Agreement</a>
+  </div>
+
+  <div>
+    <strong>Follow Us</strong><br />
+    <div class="social-icons">
+      <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+      <a href="https://discord.gg/J6dhVNj2"><img src="discord-icon.png" alt="Discord"></a>
     </div>
-    <div class="footer-links">
-      <h4>Navigation</h4>
-      <a href="scripts.html">Catalog</a>
-      <a href="#">Blog</a>
-      <a href="#">FAQ</a>
-      <a href="https://discord.gg/J6dhVNj2">Support</a>
+
+    <strong>We Accept</strong><br />
+    <div class="payment-icons">
+      <img src="visa.png" alt="Visa" />
+      <img src="paypal.png" alt="PayPal" />
+      <img src="bitcoin.png" alt="Crypto" />
     </div>
-    <div class="footer-links">
-      <h4>Legal</h4>
-      <a href="useragreement.html">User Agreement</a>
-      <a href="offeragreement.html">Offer Agreement</a>
-    </div>
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <a href="#">YouTube</a>
-      <a href="https://discord.gg/J6dhVNj2">Discord</a>
-    </div>
-    <div class="footer-payment">
-      <h4>Payments</h4>
-      <img src="visa.png" alt="Visa">
-      <img src="paypal.png" alt="PayPal">
-      <img src="crypto.png" alt="Crypto">
-    </div>
-  </footer>
+  </div>
+</footer>
+
 </body>
 </html>
