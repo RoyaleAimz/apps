@@ -6,66 +6,85 @@
   <title>Offer Agreement | VantaScripts</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="header">
-    <div class="nav-center">
-      <h1><a href="index.html" class="logo">VantaScripts</a></h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="scripts.html">Scripts</a></li>
-          <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." />
-      </div>
+<body class="page-background">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">VantaScripts</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="scripts.html">Scripts</a>
+      <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
     </div>
   </header>
 
-  <main class="main-section">
-    <a href="index.html" class="back-button">← Back</a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">← Back</a>
+  </div>
 
-    <section class="content-section">
-      <h2>Offer Agreement</h2>
-      <p>By purchasing any script or service from VantaScripts, you acknowledge that you are receiving a digital item. You understand that all transactions are final and non-refundable.</p>
-      <p>We reserve the right to change prices, revoke access, or suspend accounts if abuse or fraud is detected.</p>
-    </section>
+  <!-- Content -->
+  <main class="agreement-page">
+    <h1>Offer Agreement</h1>
+    <p>This agreement details the nature of any promotions or special offers from VantaScripts:</p>
+    <ul>
+      <li>Offers are subject to change or cancellation at any time without notice.</li>
+      <li>Discounted access may be time-limited and cannot be extended once expired.</li>
+      <li>Users must comply with all terms in the User Agreement regardless of offer status.</li>
+      <li>VantaScripts is not obligated to honor expired or retracted promotions.</li>
+      <li>Offers are exclusive to VantaScripts and cannot be combined with third-party deals.</li>
+    </ul>
+    <p>By using or claiming any promotional deal from VantaScripts, you agree to this Offer Agreement.</p>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
-        <p>Premium Rust scripts designed for safety, reliability, and power.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="images/vanta-logo.png" alt="Vanta Logo" class="footer-logo" />
+        <p>The most trusted Rust script provider. Undetected, safe, and affordable.</p>
       </div>
-      <div class="footer-sections">
-        <div class="footer-section">
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="scripts.html">Catalog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
           <h4>Legal</h4>
           <ul>
             <li><a href="user-agreement.html">User Agreement</a></li>
             <li><a href="offer-agreement.html">Offer Agreement</a></li>
           </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-column">
           <h4>Follow Us</h4>
-          <ul>
-            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a></li>
-            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          <ul class="social-icons">
+            <li><a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a></li>
+            <li><a href="#"><img src="images/discord-icon.png" alt="Discord" /></a></li>
           </ul>
         </div>
-        <div class="footer-section payment-section">
-          <h4>Payments</h4>
-          <div class="payment-icons">
-            <img src="images/paypal.png" alt="PayPal" />
-            <img src="images/visa.png" alt="Visa" />
-            <img src="images/mastercard.png" alt="Mastercard" />
-            <img src="images/crypto.png" alt="Crypto" />
-          </div>
-        </div>
+      </div>
+
+      <div class="payment-icons">
+        <img src="images/visa.png" alt="Visa" />
+        <img src="images/mastercard.png" alt="MasterCard" />
+        <img src="images/paypal.png" alt="PayPal" />
+        <img src="images/bitcoin.png" alt="Bitcoin" />
       </div>
     </div>
   </footer>
+
 </body>
 </html>
 
