@@ -3,15 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VantaScripts - Our Scripts</title>
+  <title>VantaScripts - Scripts</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background: rgba(10, 10, 10, 0.85);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+    .nav-center a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo {
+      color: #8f66ff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .search-bar {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: none;
+    }
+    .script-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .script-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .script-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 0 15px #000;
+    }
+    .badges .badge {
+      display: inline-block;
+      margin: 2px 6px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8em;
+    }
+    .green { background: #2ecc71; }
+    .blue { background: #3498db; }
+    .purple { background: #9b59b6; }
+    .gold { background: gold; color: black; }
+    .red { background: #e74c3c; }
+    .buy-button {
+      display: inline-block;
+      margin-top: 10px;
+      background: #8f66ff;
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .footer {
+      background: #111;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer-logo {
+      font-size: 1.5rem;
+      color: #8f66ff;
+    }
+    .footer-links {
+      display: flex;
+      gap: 40px;
+    }
+    .footer-links div {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 4px 0;
+    }
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .payment-icons img {
+      height: 24px;
+      margin-left: 12px;
+      filter: brightness(0.9);
+    }
+  </style>
 </head>
 <body>
-
   <!-- Top Navigation -->
   <header class="header">
     <div class="nav-left">
-      <a href="index.html" class="brand">VantaScripts</a>
+      <a href="index.html" class="logo">VantaScripts</a>
     </div>
     <nav class="nav-center">
       <a href="index.html">Home</a>
@@ -23,11 +131,11 @@
     </div>
   </header>
 
-  <!-- Script Section -->
+  <!-- Scripts Section -->
   <div class="script-section">
     <h2 class="section-title">Our Scripts</h2>
     <div class="script-cards">
-
+      
       <!-- Vanta Lite -->
       <div class="script-card">
         <div class="badges">
@@ -37,7 +145,7 @@
         </div>
         <h3>Vanta Lite</h3>
         <p class="price">$4.99</p>
-        <a href="vantalite.html" class="buy-button">View Details</a>
+        <a href="VantaLite.html" class="buy-button">View Details</a>
       </div>
 
       <!-- Vanta Full -->
@@ -49,7 +157,7 @@
         </div>
         <h3>Vanta Full</h3>
         <p class="price">$12.99</p>
-        <a href="vantafull.html" class="buy-button">View Details</a>
+        <a href="VantaFull.html" class="buy-button">View Details</a>
       </div>
 
     </div>
@@ -57,36 +165,45 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-left">
-      <img src="logo.png" alt="Vanta Logo" class="footer-logo" />
-      <p>VantaScripts offers premium Rust scripts with high security and performance.</p>
+    <div class="footer-top">
+      <div class="footer-left">
+        <h3 class="footer-logo">VantaScripts</h3>
+        <p>Powerful Rust scripts designed for security and performance.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigate</h4>
+          <a href="scripts.html">Catalog</a>
+          <a href="#">Blog</a>
+          <a href="#">FAQ</a>
+          <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <a href="user-agreement.html">User Agreement</a>
+          <a href="offer-agreement.html">Offer Agreement</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
     </div>
-    <div class="footer-links">
-      <div>
-        <h4>Navigation</h4>
-        <a href="scripts.html">Catalog</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQ</a>
-        <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
-      </div>
-      <div>
-        <h4>Information</h4>
-        <a href="user-agreement.html">User Agreement</a>
-        <a href="offer-agreement.html">Offer Agreement</a>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a>
-        <a href="#">YouTube</a>
-      </div>
-      <div>
-        <h4>Payments</h4>
-        <img src="visa.png" alt="Visa" class="payment-icon" />
-        <img src="paypal.png" alt="PayPal" class="payment-icon" />
-        <img src="crypto.png" alt="Crypto" class="payment-icon" />
+
+    <div class="footer-bottom">
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" />
+        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/stripe.png" alt="Stripe" />
+        <img src="https://img.icons8.com/color/48/000000/google-pay.png" alt="Google Pay" />
+        <img src="https://img.icons8.com/ios/50/ffffff/qr-code.png" alt="QR Code" />
+        <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" />
+        <img src="https://img.icons8.com/color/48/000000/bitcoin--v1.png" alt="Bitcoin" />
+        <img src="https://i.imgur.com/8TGcBZF.png" alt="b2pay" />
       </div>
     </div>
   </footer>
-
 </body>
 </html>
+
