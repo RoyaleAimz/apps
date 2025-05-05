@@ -6,98 +6,111 @@
   <title>Vanta Full | VantaScripts</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="header">
-    <div class="nav-center">
-      <h1><a href="index.html" class="logo">VantaScripts</a></h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="scripts.html">Scripts</a></li>
-          <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." />
-      </div>
+<body class="page-background">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link">VantaScripts</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="scripts.html">Scripts</a>
+      <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
     </div>
   </header>
 
-  <main class="main-section">
-    <a href="scripts.html" class="back-button">← Back to Scripts</a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="scripts.html">← Back</a>
+  </div>
 
-    <section class="script-detail">
-      <h2>Vanta Full</h2>
-      <p class="price-tag">$12.99</p>
-      <div class="badge badge-green">🟢 Undetected - Full Access</div>
-      <div class="badge badge-purple">🔥 Best Sale - All Features</div>
-      <p>Our Full version offers maximum capability and customization for serious players. Updated consistently and designed for safety.</p>
-
-      <ul class="features-list">
-        <li>✔️ Advanced no recoil for all weapons</li>
-        <li>✔️ Configurable hotkeys</li>
-        <li>✔️ Multiple injection modes</li>
-        <li>✔️ Lifetime support & updates</li>
-      </ul>
-
-      <button class="buy-now-button" onclick="openPaymentModal()">Buy Now</button>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <img src="images/logo.png" alt="Vanta Logo" class="footer-logo" />
-        <p>Premium Rust scripts designed for safety, reliability, and power.</p>
+  <!-- Script Details -->
+  <section class="script-detail">
+    <div class="script-detail-card">
+      <h1>Vanta Full</h1>
+      <p class="script-description">The ultimate Rust script with all features unlocked, full control, and premium detection bypass. Perfect for power users.</p>
+      
+      <div class="badges">
+        <span class="badge green">🟢 Undetected</span>
+        <span class="badge gold">Premium Features</span>
+        <span class="badge red">Most Popular</span>
       </div>
-      <div class="footer-sections">
-        <div class="footer-section">
+
+      <div class="script-price">$12.99</div>
+
+      <button class="buy-button" onclick="openBuyModal()">Buy Now</button>
+    </div>
+  </section>
+
+  <!-- Buy Modal -->
+  <div id="buyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBuyModal()">&times;</span>
+      <h2>Select Payment Method</h2>
+      <ul class="payment-options">
+        <li><button>PayPal</button></li>
+        <li><button>Crypto</button></li>
+        <li><button>Card</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="images/vanta-logo.png" alt="Vanta Logo" class="footer-logo" />
+        <p>The most trusted Rust script provider. Undetected, safe, and affordable.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="scripts.html">Catalog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
           <h4>Legal</h4>
           <ul>
             <li><a href="user-agreement.html">User Agreement</a></li>
             <li><a href="offer-agreement.html">Offer Agreement</a></li>
           </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-column">
           <h4>Follow Us</h4>
-          <ul>
-            <li><a href="https://discord.gg/J6dhVNj2" target="_blank">Discord</a></li>
-            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          <ul class="social-icons">
+            <li><a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a></li>
+            <li><a href="#"><img src="images/discord-icon.png" alt="Discord" /></a></li>
           </ul>
         </div>
-        <div class="footer-section payment-section">
-          <h4>Payments</h4>
-          <div class="payment-icons">
-            <img src="images/paypal.png" alt="PayPal" />
-            <img src="images/visa.png" alt="Visa" />
-            <img src="images/mastercard.png" alt="Mastercard" />
-            <img src="images/crypto.png" alt="Crypto" />
-          </div>
-        </div>
+      </div>
+
+      <div class="payment-icons">
+        <img src="images/visa.png" alt="Visa" />
+        <img src="images/mastercard.png" alt="MasterCard" />
+        <img src="images/paypal.png" alt="PayPal" />
+        <img src="images/bitcoin.png" alt="Bitcoin" />
       </div>
     </div>
   </footer>
 
-  <!-- Payment Modal -->
-  <div id="payment-modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close-button" onclick="closePaymentModal()">×</span>
-      <h3>Select a Payment Method</h3>
-      <ul>
-        <li><button>PayPal</button></li>
-        <li><button>Crypto</button></li>
-        <li><button>Visa / Mastercard</button></li>
-      </ul>
-    </div>
-  </div>
-
   <script>
-    function openPaymentModal() {
-      document.getElementById('payment-modal').classList.remove('hidden');
+    function openBuyModal() {
+      document.getElementById("buyModal").style.display = "block";
     }
-    function closePaymentModal() {
-      document.getElementById('payment-modal').classList.add('hidden');
+    function closeBuyModal() {
+      document.getElementById("buyModal").style.display = "none";
     }
   </script>
 </body>
+</html>
+
 </html>
