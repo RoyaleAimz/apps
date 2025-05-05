@@ -2,196 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VantaScripts - Home</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
+    body, html {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: white;
-    }
-    header {
+      padding: 0;
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      background: #111111dd;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
+      flex-direction: column;
+      background-color: #0e0e0e;
       color: white;
-      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .search-bar {
-      padding: 6px;
-      border-radius: 6px;
-      border: none;
+
+    header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .container {
-      padding: 60px 32px 120px;
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .script-cards {
       display: flex;
-      gap: 24px;
+      gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .script-card {
-      background: #1a1a1a;
+      background: #1e1e1e;
       border-radius: 12px;
       padding: 20px;
       width: 300px;
       text-align: center;
-      box-shadow: 0 0 12px rgba(0,255,150,0.1);
-      transition: 0.3s;
-      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .script-card:hover {
-      box-shadow: 0 0 20px rgba(0,255,150,0.3);
-      transform: translateY(-5px);
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
     }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
     .badge {
-      background: #00c777;
-      color: black;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-weight: bold;
+      background-color: #00c6ff;
+      padding: 5px 10px;
+      border-radius: 20px;
       font-size: 12px;
-      margin-bottom: 8px;
-      display: inline-block;
     }
+
     footer {
-      background: #111;
-      padding: 40px 32px;
-      color: white;
+      background-color: #111;
+      padding: 20px 40px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .footer-content {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-top: auto;
     }
-    .footer-section {
-      max-width: 200px;
+
+    .footer-column {
+      margin-bottom: 10px;
+      min-width: 150px;
     }
+
+    .footer-column h4 {
+      color: #00c6ff;
+      margin-bottom: 8px;
+    }
+
     .footer-logo {
-      font-size: 20px;
-      color: #00c777;
+      font-size: 18px;
       font-weight: bold;
+      color: #00c6ff;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.3);
-      z-index: 1000;
-    }
-    .modal.show {
-      display: block;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 999;
-    }
-    .overlay.show {
-      display: block;
+
+    .social-icons img,
+    .payment-icons img {
+      height: 24px;
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 onclick="location.href='index.html'">VantaScripts</h1>
+    <div class="logo"><a href="index.html" style="color:#00c6ff; text-decoration:none; font-weight:bold; font-size:18px;">VantaScripts</a></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="scripts.html">Scripts</a>
       <a href="https://discord.gg/J6dhVNj2" target="_blank">Support</a>
     </nav>
-    <input class="search-bar" type="text" id="searchInput" placeholder="Search...">
   </header>
 
-  <div class="container">
-    <h2 style="text-align:center;">Welcome to VantaScripts</h2>
+  <div class="content">
+    <h1>Welcome to VantaScripts</h1>
     <div class="script-cards">
-      <div class="script-card" onclick="location.href='vantalite.html'">
-        <div class="badge">🟢 Undetected</div>
-        <h3>Vanta Lite</h3>
-        <p>$4.99</p>
-        <button onclick="event.stopPropagation(); toggleModal()">Buy Now</button>
-      </div>
-      <div class="script-card" onclick="location.href='vantafull.html'">
-        <div class="badge">🟢 Undetected</div>
-        <h3>Vanta Full</h3>
-        <p>$12.99</p>
-        <button onclick="event.stopPropagation(); toggleModal()">Buy Now</button>
-      </div>
+      <a href="vantalite.html" class="script-card">
+        <div class="badges">
+          <span class="badge">🟢 Undetected</span>
+          <span class="badge">Best Sale</span>
+        </div>
+        <h2>Vanta Lite</h2>
+        <p>Lite version script - optimized and affordable.</p>
+        <p><strong>$4.99</strong></p>
+      </a>
+      <a href="vantafull.html" class="script-card">
+        <div class="badges">
+          <span class="badge">🟢 Undetected</span>
+          <span class="badge">The Safest</span>
+        </div>
+        <h2>Vanta Full</h2>
+        <p>Full version with advanced features and stability.</p>
+        <p><strong>$12.99</strong></p>
+      </a>
     </div>
-  </div>
-
-  <div class="overlay" id="overlay" onclick="toggleModal()"></div>
-  <div class="modal" id="paymentModal">
-    <h3>Select Payment Method</h3>
-    <ul>
-      <li>PayPal</li>
-      <li>Crypto</li>
-      <li>Credit Card</li>
-    </ul>
-    <button onclick="toggleModal()">Close</button>
   </div>
 
   <footer>
-    <div class="footer-section">
-      <div class="footer-logo">VantaScripts</div>
-      <p>The safest Rust scripts with elite features and undetected performance.</p>
-    </div>
-    <div class="footer-section">
-      <strong>Navigate</strong><br>
-      Catalog<br>
-      Blog<br>
-      FAQ<br>
-      Support
-    </div>
-    <div class="footer-section">
-      <strong>Info</strong><br>
-      <a href="useragreement.html" style="color:white;">User Agreement</a><br>
-      <a href="offeragreement.html" style="color:white;">Offer Agreement</a>
-    </div>
-    <div class="footer-section">
-      <strong>Follow Us</strong><br>
-      YouTube<br>
-      Discord
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-logo">VantaScripts</div>
+        <p>Premium Rust script provider. Reliable. Undetected. Trusted.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <p><a href="scripts.html" style="color:white">Catalog</a></p>
+        <p><a href="#" style="color:white">Blog</a></p>
+        <p><a href="#" style="color:white">FAQ</a></p>
+        <p><a href="https://discord.gg/J6dhVNj2" target="_blank" style="color:white">Support</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Information</h4>
+        <p><a href="user-agreement.html" style="color:white">User Agreement</a></p>
+        <p><a href="offer-agreement.html" style="color:white">Offer Agreement</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="icons/youtube.png" alt="YouTube"></a>
+          <a href="https://discord.gg/J6dhVNj2" target="_blank"><img src="icons/discord.png" alt="Discord"></a>
+        </div>
+        <h4 style="margin-top: 10px;">Payments</h4>
+        <div class="payment-icons">
+          <img src="icons/visa.png" alt="Visa">
+          <img src="icons/paypal.png" alt="PayPal">
+          <img src="icons/mastercard.png" alt="MasterCard">
+          <img src="icons/crypto.png" alt="Crypto">
+        </div>
+      </div>
     </div>
   </footer>
-
-  <script>
-    function toggleModal() {
-      document.getElementById('paymentModal').classList.toggle('show');
-      document.getElementById('overlay').classList.toggle('show');
-    }
-
-    document.getElementById("searchInput").addEventListener("keydown", function(e) {
-      if (e.key === "Enter") {
-        alert("Search not yet implemented.");
-      }
-    });
-  </script>
 </body>
 </html>
+
